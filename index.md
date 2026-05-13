@@ -1,5 +1,3 @@
-Here you can say lots of fun things about your site.
+I am a PhD student at the University of Lisbon working on firm power for Iberia's future decarbonized grid.
 
-Maybe say a some things about yourself.
-
-Or maybe what you plan to blog about.
+This is a companion blog to my Google Summer of Code (GSoC) 2026 project with pvlib, titled "Standardizing Diffuse Irradiance Components and Extending ModelChain's Optical Loss Modeling".
