@@ -1,4 +1,4 @@
-# GSoC 2026 Project Kickoff: Improving Diffuse Irradiance and Optical Loss Modeling in pvlib
+# GSoC 2026 Project Kickoff
 
 Hi everyone! 👋
 
@@ -33,5 +33,7 @@ By exposing and handling these components more consistently, pvlib users will be
 I’m excited to contribute to pvlib-python and work with the community over the summer. I’ve used pvlib in both teaching and research, so it’s very rewarding to now contribute back to the project.
 
 I will be posting bi-weekly updates throughout the summer to share progress, implementation details, and lessons learned.
+
+Feel free to look at my full work plan and join the discussion over on [GitHub](https://github.com/pvlib/pvlib-python/issues/2750).
 
 Looking forward to collaborating with everyone!
