@@ -11,7 +11,7 @@ Currently, only some models, such as [`perez`](https://pvlib-python.readthedocs.
 - `reindl`
 - `king`
 
-The original idea was to fully standardize the outputs by having all functions support return_components and return the same four values as perez, perez_driesse, and haydavies.
+The original idea was to fully standardize the outputs by having all functions support `return_components` and return the same four values as perez, perez_driesse, and haydavies.
 
 One complication is that some models — particularly isotropic — do not inherently distinguish between multiple diffuse components. Our initial thought was to return zeros for missing components, but feedback from the pvlib GitHub community suggested avoiding this approach. Since future transposition models may include different or additional diffuse components, it makes more sense to keep the interface flexible.
 
