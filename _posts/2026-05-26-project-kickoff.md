@@ -13,15 +13,13 @@ The project centers around two closely related improvements in pvlib:
 - Standardizing the outputs of diffuse transposition models
 - Extending `ModelChain` to support more physically consistent optical loss calculations
 
-At the moment, different diffuse irradiance models in `pvlib.irradiance` return different kinds of outputs. Some models can expose individual diffuse components — such as circumsolar, isotropic, and horizon diffuse irradiance — while others only provide total diffuse irradiance.
+At the moment, diffuse irradiance models in `pvlib.irradiance` return outputs with different levels of detail. Some models can provide individual diffuse components — such as circumsolar, isotropic, and horizon diffuse irradiance — while others only provide total diffuse irradiance. One of the goals of this project is to make these outputs more consistent across models through a shared framework.
 
-One of the goals of this project is to make these outputs more consistent across models through a shared interface.
-
-Building on that, I’ll also be working on improvements to `ModelChain` so that different irradiance components can use different IAM (Incident Angle Modifier) models. This should make optical loss modeling more flexible and physically realistic, while keeping the current behavior fully backward compatible.
+Once all models are able to return diffuse components, component-specific optical losses can be determined, and in particular, can be implemented within the `ModelChain` framework. Therefore, I will also be working on improvements to `ModelChain` so that users can choose irradiance component-specific IAM (Incident Angle Modifier) models. This should make optical loss modeling more flexible and physically realistic, while keeping the current behavior fully backward compatible.
 
 ## Motivation
 
-Diffuse irradiance is often treated as a single quantity, but in reality it comes from different regions of the sky and interacts differently with PV modules depending on incidence angle.
+Diffuse irradiance is often treated as a single quantity, but in reality it comes from different regions of the sky with different angular distributions. This makes it so that the incidence angle is also varied, and as a result, the optical losses due to reflection at the PV module surface.
 
 By exposing and handling these components more consistently, pvlib users will be able to:
 - Access richer irradiance information from transposition models
