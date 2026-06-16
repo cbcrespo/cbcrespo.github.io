@@ -20,7 +20,7 @@ This PR has passed all checks and is currently waiting for review and merge.
 
 While working on `reindl`, one of my mentors noticed that one of the references cited in the implementation was incorrect and opened an [issue](https://github.com/pvlib/pvlib-python/issues/2765) for it.
 
-This wasn't originally part of my GSoC plan, but it was a nice opportunity to contribute a small fix. Along the way, a reviewer also pointed out that the references in the function didn't follow pvlib's preferred citation style, so I updated them to IEEE format as well.
+This wasn't originally part of my GSoC plan, but it was a nice opportunity to contribute a small fix. While working on this, I also updated all references in the function to follow `pvlib`'s current IEEE citation style.
 
 This PR has already been merged.
 
