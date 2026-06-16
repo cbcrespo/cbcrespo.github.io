@@ -36,8 +36,8 @@ I'm currently working on the remaining transposition models:
 
  - `haydavies` - this function already supports `return_components`, but when `True` it includes a horizon brightening component which is always zero. Since the model does not actually include horizon brightening, this component doesn't provide any useful information. The plan is to remove it so that the returned components more accurately reflect the underlying model.
  - `isotropic` - isotropic is probably the simplest case implementation-wise. The model only represents isotropic diffuse irradiance, so the main work consists of adjusting the output structure and adding appropriate tests.
- - `klucher` - klucher is proving to be the most challenging model so far. While other models can be cleanly decomposed into separate diffuse components, in the Klucher formulation the terms are multiplicative, making this separation much less straightforward. Separation into components will require some assumptions and simplifications.
- - `perez` and `perez_driesse` - I had originally expected to leave `perez` and `perez_driesse` untouched since they already support `return_components`. However, because of the decision to standardize on regular dictionaries instead of OrderedDicts, I'll need to make this change there as well to keep the interface consistent across all models.
+ - `klucher` - Klucher is proving to be the most challenging model so far. While other models can be cleanly decomposed into separate diffuse components, in the Klucher formulation the terms are multiplicative, making this separation much less straightforward. Separation into components will require some assumptions and simplifications.
+ - `perez` and `perez_driesse` - I had originally expected to leave `perez` and `perez_driesse` untouched since they already support `return_components`. However, because of the decision to standardize on regular dictionaries instead of `OrderedDicts`, I'll need to make this change there as well to keep the interface consistent across all models.
 
 ## Learning along the way
 
