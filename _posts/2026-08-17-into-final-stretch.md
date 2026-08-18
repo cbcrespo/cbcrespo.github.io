@@ -8,7 +8,7 @@ The main goal of Phase 1 was to standardize the handling of diffuse irradiance c
 
 All of the sky diffuse irradiance models now support returning separate diffuse components, with two exceptions: `king`, which is being deprecated, and `klucher`, whose formulation does not allow for a meaningful separation of the components.
 
-The higher-level wrapper functions in `pvlib.irradiance` — `get_sky_diffuse`, `poa_components`, and `get_total_irradiance` — now support `return_components` as well. This means that users can access the diffuse components without having to use the individual transposition models directly.
+The higher-level wrapper functions in `pvlib.irradiance` — `get_sky_diffuse`, `poa_components`, and `get_total_irradiance` — now support `return_components` as well. This means that in the next version of `pvlib`, users will be able to access the diffuse components without having to use the individual transposition models directly.
 
 This completes the first major milestone of the project: diffuse component handling is now available consistently from the individual transposition models through the higher-level irradiance workflow. This provides the foundation needed for the next phase, where these components will be used to improve optical loss modelling in `ModelChain`.
 
